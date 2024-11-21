@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Accessible Accordion</title>
+        <link href="accordion.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+  <main>
+    <div class="container" role="region" aria-labelledby="accordion-header"> 
+      <h1 id="accordion-header">Simple Accordions</h1> 
+
+      <button class="accordion" aria-expanded="false" aria-controls="panel1" id="header1"> 
+        Website Design and Development
+      </button>
+      <div class="accordion-content" id="panel1" role="region" aria-hidden="true"> 
+        <p>
+          Whether you need a WordPress website, a Shopify site, or a custom full-stack application, we got you!
+          No matter what kind of website or application you need, it will be made with clean and maintainable code
+          that follows modern development standards...
+        </p>
+      </div>
+
+      <button class="accordion" aria-expanded="false" aria-controls="panel2" id="header2"> 
+        Website Analytics and Performance
+      </button>
+      <div class="accordion-content" id="panel2" role="region" aria-hidden="true"> 
+        <p>
+          We believe that in order to have a successful website, you need to constantly adjust and adapt to the data provided...
+        </p>
+      </div>
+
+      <button class="accordion" aria-expanded="false" aria-controls="panel3" id="header3"> 
+          Digital Marketing
+      </button>
+      <div class="accordion-content" id="panel3" role="region" aria-hidden="true"> 
+        <p>
+          We know that every great website focuses on helping you get more business and building a brand that your ideal customers will love...
+        </p>
+      </div>
+    </div>
+    <script src="accordion.js"></script>
+  </main>
+</body>
+</html>
