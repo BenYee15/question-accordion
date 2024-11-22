@@ -12,27 +12,26 @@
 const accordionBtns = document.querySelectorAll(".accordion");
 
 accordionBtns.forEach((accordion) => {
-  accordion.addEventListener = ("click", function () {
+  accordion.addEventListener("click", function () {
     this.classList.toggle("is-open");
 
     let content = this.nextElementSibling;
-    //console.log(content);
 
     if (content.style.maxHeight) {
-      //this is if the accordion is open
-      content.style.maxHeight = null;
+      content.style.maxHeight = null; 
+      this.setAttribute("aria-expanded", "false");
     } else {
-      //if the accordion is currently closed
-      content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
+      content.style.maxHeight = content.scrollHeight + "px"; 
+      this.setAttribute("aria-expanded", "true");
     }
   });
 
-
   accordion.addEventListener("keydown", (event) => {
-    if(event.key  === "Enter" || event.key === " "){
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       accordion.click();
     }
-  })
+  });
 });
+
+ 
