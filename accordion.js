@@ -16,7 +16,7 @@ accordionBtns.forEach((accordion) => {
     this.classList.toggle("is-open");
 
     let content = this.nextElementSibling;
-    console.log(content);
+    //console.log(content);
 
     if (content.style.maxHeight) {
       //this is if the accordion is open
